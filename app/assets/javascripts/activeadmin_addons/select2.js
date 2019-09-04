@@ -87,8 +87,7 @@ $(function() {
             });
 
             static_fields.forEach(function(field) {
-                textQuery[field] = term;
-              }
+              textQuery[field] = term;
             });
 
             var query =  {
