@@ -68,8 +68,8 @@ $(function() {
         var minimumInputLength = $(el).data('minimum_input_length');
         var order = $(el).data('order') || (fields[0] + '_desc');
         var parentId = $(el).data('parent_id') || INVALID_PARENT_ID;
-        var predicate = element.data('predicate');
-        var static_fields = element.data('static_fields');
+        var predicate = $(el).data('predicate');
+        var static_fields = $(el).data('static_fields');
         var selectInstance;
 
         var ajaxOptions = {
