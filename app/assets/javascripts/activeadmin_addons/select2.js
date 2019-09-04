@@ -82,7 +82,7 @@ $(function() {
               if (field == "id") {
                 textQuery[field + '_eq'] = term;
               } else {
-                textQuery[field + predicate] = term;
+                textQuery[field + '_' + predicate] = term;
               }
             });
 
