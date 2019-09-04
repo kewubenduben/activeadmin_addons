@@ -11,6 +11,9 @@ class SearchSelectInput < Formtastic::Inputs::StringInput
     opts["data-width"] = @options[:width] if @options[:width]
     opts["data-selected"] = relation.try(opts["data-display_name"].to_sym)
     opts["data-order"] = @options[:order_by] if @options[:order_by]
+    opts["data-predicate"] = @options[:predicate] || "contains"
+    opts["data-static_fields"] = (@options[:static_fields] || []).to_json
+
     super.merge opts
   end
 end
